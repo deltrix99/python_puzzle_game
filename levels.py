@@ -325,8 +325,42 @@ def level3_questions():
         
         return False
 
-    
+
     def level3_question2():
+        
+        print("Which quote is better: ")
+        print("a: ")
+        print("b: ")
+        answer = input("Please enter 'a' or 'b': ").lower().strip()
+
+        if answer == "b":
+            print("\n")
+            return True
+            
+        else:
+            print("\n")
+        
+        return False
+
+    
+    def level3_question3():
+        
+        print("Which quote is better: ")
+        print("a: ")
+        print("b: ")
+        answer = input("Please enter 'a' or 'b': ").lower().strip()
+
+        if answer == "b":
+            print("\n")
+            return True
+            
+        else:
+            print("\n")
+        
+        return False
+
+
+    def level3_question4():
         
         print("Which quote is better: ")
         print("a: ")
@@ -341,6 +375,30 @@ def level3_questions():
             print("\n")
         
         return False
+
+    
+    def level3_question5():
+        
+        print("Which quote is better: ")
+        print("a: ")
+        print("b: ")
+        answer = input("Please enter 'a' or 'b': ").lower().strip()
+
+        if answer == "":
+            print("\n")
+            return True
+            
+        else:
+            print("None of the quotes are good, they misrepresent our lives.\n")
+        
+        return False
+
+    # lists all of the questions for level 3
+    all_questions_3 = [level3_question1, level3_question2, level3_question3, level3_question4, level3_question5]
+    random.shuffle(all_questions_3)
+    for question in all_questions_3:
+        question()
+    
 
 
 
