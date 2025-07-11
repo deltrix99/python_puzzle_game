@@ -14,22 +14,36 @@ def main():
         print(f"{n_raw} is not a valid level number. Please enter a number between 1 and 10.")
 
 
+# level_selected function: selects the level based on the input number
+# n: the level number to select
 def level_selected(n):
     
+    # selects level 1
     if n == 1:
         
         print("You are on Level 1: Complicated Math Puzzles that I hate.")
-        print("I have chosen the worst topic for you: Math, and the parts I don't enjoy.\n")
+        print("I have chosen the worst topic for you: math, and used the parts I don't enjoy.\n")
         
         level1_questions()
     
+    # selects level 2
     elif n == 2:
 
         print("You are on Level 2: arras.io Questions that most people don't know.")
         print("I have chosen another topic for you: arras.io, a simple browser game based off of diep.io.\n")
         
         level2_questions()
+
+    # selects level 3
+    elif n == 3:
+        print("You are on Level 3: choose the better quote based off of common sense.")
+        print("The next topic will be about comparing quotes in my opinion, so choose wisely.\n")
+        
+        level3_questions()
     
+    # selects level 4
+
+    # if the level is not implemented
     else:
         
         print(f"Level {n} is unfortunately not implemented yet. Please try another level (1-10).")
@@ -154,15 +168,17 @@ def level1_questions():
 
     
     # lists all of the questions for level 1
-    all_questions = [level1_question1, level1_question2, level1_question3, level1_question4, level1_question5]
-    random.shuffle(all_questions)
-    for question in all_questions:
+    all_questions_1 = [level1_question1, level1_question2, level1_question3, level1_question4, level1_question5]
+    random.shuffle(all_questions_1)
+    for question in all_questions_1:
         question()
 
 
 
+# level 2 questions: a set of arras.io-related questions
 def level2_questions():
     
+    # level 2: question1: asks about the current developer of arras.io
     def level2_question1():
         
         for attempt in range(2):
@@ -181,6 +197,7 @@ def level2_questions():
 
         return False
     
+    # level 2: question2: asks about the maximum skill points in arras.io
     def level2_question2():
         
         for attempt in range(2):
@@ -202,7 +219,128 @@ def level2_questions():
             return False
 
 
+    # level 2: question3: asks about the doppleganger tank
+    def level2_question3():
 
+        for attempt in range(2):
+            answer = input("What is the name of the tank that I helped participate in introducing (only true friends know)? ").lower().strip()
+            
+            if answer == "doppleganger":
+                print("Correct! The doppleganger tank is a tank that I indirectly suggested.\n")
+                return True
+            
+            else:
+                if attempt == 0:
+                    print("Try again!")
+                
+                else:
+                    print("The correct answer is 'doppleganger'. It is a duplicate option for the normal 'ganger'.\n")
+        
+        return False
+    
+    # level 2: question4: asks about the best tanks in Arms
+    def level2_question4():
+
+        for attempt in range(2):
+            answer = input("What is one of the best tanks in Arms Race (non-growth)? ").lower().strip()
+
+            if answer == "Headman":
+                print("Correct! Headman is one of the best tabnks because of its high damage drones.\n")
+                return True
+            
+            elif answer == "Spectre":
+                print("Correct! Spectre is one of the best because of its powerful drones and auto-turrets.\n")
+                return True
+
+            elif answer == "Thrasher":
+                print("Correct! Thrasher is one of the best because of its high versatility in many situations.\n")
+                return True
+
+            elif answer == "Captrapper":
+                print("Correct! Captrapper is one of the best because of its strong spawner drones and defense.\n")
+                return True
+
+            elif answer == "Toppler":
+                print("Correct! Toppler is one of the best because of its high damage and reload for farming.\n")
+                return True
+
+            else:
+                if attempt == 0:
+                    print("Try again!")
+                
+                else:
+                    print("The correct answers are: 'Headman', 'Spectre', 'Thrasher', 'Captrapper', or 'Toppler'.\n")
+
+            return False
+
+    # level 2: question5: asks about the arras.io game 
+    def level2_question5():
+        
+        for attempt in range(2):
+            print("I need an honest opinion on this one. It's not a controversial question, but I need to know.")
+            answer = input("Do you think arras.io is a good game? (yes/no): ").lower().strip()
+
+            if answer == "yes":
+                print("I half-heartedly appreciate your support for arras.io even though you've probably never played it.\n")
+                return True
+            
+            elif answer == "no":
+                print("You should consider actually playing the game and tell me what you think.\n")
+                return True
+            
+            else:
+                if attempt == 0:
+                    print("Try again with yes/no!")
+                
+                else:
+                    print("No way you couldn't provide a yes/no answer for this.\n")
+
+        return False
+
+    # lists all of the questions for level 1
+    all_questions_2 = [level2_question1, level2_question2, level2_question3, level2_question4, level2_question5]
+    random.shuffle(all_questions_2)
+    for question in all_questions_2:
+        question()
+
+
+
+# level 3 questions: a set of quote-related questions
+def level3_questions():
+
+    # level 3: question1: asks about the better quote about work and happiness
+    def level3_question1():
+        
+        print("Which quote is better: ")
+        print("a: 'The only way to do great work is to love what you do.'")
+        print("b: 'Success is not the key to happiness. Happiness is the key to success.'")
+        answer = input("Please enter 'a' or 'b': ").lower().strip()
+
+        if answer == "a":
+            print("Correct! This quote emphasizes passion in work over just being happy with what you do.\n")
+            return True
+            
+        else:
+            print("Happiness is not a permanent way of life, find what you truly love doing and stick with it'\n")
+        
+        return False
+
+    
+    def level3_question2():
+        
+        print("Which quote is better: ")
+        print("a: ")
+        print("b: ")
+        answer = input("Please enter 'a' or 'b': ").lower().strip()
+
+        if answer == "a":
+            print("\n")
+            return True
+            
+        else:
+            print("\n")
+        
+        return False
 
 
 

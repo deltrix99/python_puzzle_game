@@ -1,4 +1,4 @@
-# This script saves the current game state to a CSV file.
+# This script saves the current game state to a CSV file WITHOUT using the csv module.
 # It allows the player to save their progress, including the current level and time taken.
 # The saved data can be used to resume the game later or for tracking progress.
 
